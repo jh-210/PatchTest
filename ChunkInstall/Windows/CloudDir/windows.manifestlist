@@ -1,0 +1,14 @@
+{
+	"ClientVersion": "release1",
+	"BuildUrl": "release1/Windows",
+	"files": [
+		{
+			"filename": "MyProject_pakchunk1release1.manifest",
+			"uniqueFilename": "MyProject_pakchunk1release1.manifest",
+			"length": 931,
+			"URL": "MyProject_pakchunk1release1.manifest",
+			"hash": "CBCE6279BB282BA5373979B55E683E3A6E4EAB9A",
+			"hash256": "34BEED8BB06D7F80B30B0AB59CD1B0FC82940CDAC1AF38834DB9B0C56CF89250"
+		}
+	]
+}
