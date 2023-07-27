@@ -7,8 +7,8 @@
 void UMyGameInstance::Init()
  {
          Super::Init();
-         const FString DeploymentName = "PatchingDemoLive";
-         const FString ContentBuildId = "PatchingDemoKey";
+         const FString DeploymentName = "PatchTestKey";
+         const FString ContentBuildId = "PatchTestKey";
 
          // 선택한 플랫폼에서 청크 다운로더를 초기화합니다.
          TSharedRef<FChunkDownloader> Downloader = FChunkDownloader::GetOrCreate();
@@ -55,6 +55,11 @@ void UMyGameInstance::Init()
      // 다운로드 매니페스트를 최신 상태로 유지합니다.
      if (bIsDownloadManifestUpToDate)
      {
+         if (GEngine)
+         {
+             GEngine->AddOnScreenDebugMessage(-1, 15.0f, FColor::Yellow, TEXT("Patch Start"));
+         }
+
          // 청크 다운로더를 가져옵니다.
          TSharedRef<FChunkDownloader> Downloader = FChunkDownloader::GetChecked();
 
@@ -76,6 +81,11 @@ void UMyGameInstance::Init()
 
      // 매니페스트를 검증하기 위해 서버와 연락하는 데 실패하여 패치할 수 없었습니다.
      UE_LOG(LogTemp, Display, TEXT("Manifest Update Failed. Can't patch the game"));
+
+     if (GEngine)
+     {
+         GEngine->AddOnScreenDebugMessage(-1, 15.0f, FColor::Yellow, TEXT("Manifest Update Failed. Can't patch the game"));
+     }
 
      return false;
  }
@@ -104,11 +114,21 @@ void UMyGameInstance::Init()
          TFunction<void(bool bSuccess)> MountCompleteCallback = [&](bool bSuccess) {OnMountComplete(bSuccess); };
          Downloader->MountChunks(DownloadedChunks, MountCompleteCallback);
 
+         if (GEngine)
+         {
+             GEngine->AddOnScreenDebugMessage(-1, 15.0f, FColor::Yellow, TEXT("Download Complete!"));
+         }
+
          OnPatchComplete.Broadcast(true);
      }
      else
      {
          UE_LOG(LogTemp, Display, TEXT("Load process failed"));
+
+         if (GEngine)
+         {
+             GEngine->AddOnScreenDebugMessage(-1, 15.0f, FColor::Yellow, TEXT("Download failed!"));
+         }
 
          // 델리게이트를 호출합니다.
          OnPatchComplete.Broadcast(false);

@@ -1,0 +1,7 @@
+$NUM_ENTRIES = 5
+$BUILD_ID = PatchTestKey
+pakchunk0-Windows.pak	9709811	ver01	0	/Windows/pakchunk0-Windows.pak
+pakchunk0-Windows.ucas	81842176	ver01	0	/Windows/pakchunk0-Windows.ucas
+pakchunk0-Windows.utoc	163853	ver01	0	/Windows/pakchunk0-Windows.utoc
+pakchunk1-Windows.ucas	85232	ver01	1	/Windows/pakchunk1-Windows.ucas
+pakchunk1-Windows.utoc	535	ver01	1	/Windows/pakchunk1-Windows.utoc
