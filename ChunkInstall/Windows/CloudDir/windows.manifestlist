@@ -1,0 +1,14 @@
+{
+	"ClientVersion": "release1",
+	"BuildUrl": "release1/Windows",
+	"files": [
+		{
+			"filename": "PatchTest_pakchunk1001release1.manifest",
+			"uniqueFilename": "PatchTest_pakchunk1001release1.manifest",
+			"length": 937,
+			"URL": "PatchTest_pakchunk1001release1.manifest",
+			"hash": "BF989EB1D55F105ABF637E20BCD8D5F8CDD92ACB",
+			"hash256": "3B34DE20DDAA23B2F6E697A6646E82A4815F1FA5053AB9D618339B0FABFF39EE"
+		}
+	]
+}
