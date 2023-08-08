@@ -9,6 +9,14 @@
 			"URL": "PatchTest_pakchunk1001release1.manifest",
 			"hash": "BF989EB1D55F105ABF637E20BCD8D5F8CDD92ACB",
 			"hash256": "3B34DE20DDAA23B2F6E697A6646E82A4815F1FA5053AB9D618339B0FABFF39EE"
+		},
+		{
+			"filename": "PatchTest_pakchunk1002release1.manifest",
+			"uniqueFilename": "PatchTest_pakchunk1002release1.manifest",
+			"length": 937,
+			"URL": "PatchTest_pakchunk1002release1.manifest",
+			"hash": "86CB7AF0449ABC2434DC5CD341192619E63958C4",
+			"hash256": "4C3FC8C5D29C787E95AC8492CDD68109DD53AA3260C156FD8CA369317E068E26"
 		}
 	]
 }
