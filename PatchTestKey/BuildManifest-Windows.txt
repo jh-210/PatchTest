@@ -1,5 +1,8 @@
-$NUM_ENTRIES = 3
+$NUM_ENTRIES = 6
 $BUILD_ID = PatchTestKey
-pakchunk1001-Windows.pak	339	ver	1001	/Windows/pakchunk1001-Windows.pak
-pakchunk1001-Windows.ucas	180816	ver	1001	/Windows/pakchunk1001-Windows.ucas
-pakchunk1001-Windows.utoc	1137	ver	1001	/Windows/pakchunk1001-Windows.utoc
+pakchunk1001-Windows_0_P.pak	339	ver	1001	/Windows/pakchunk1001-Windows_0_P.pak
+pakchunk1001-Windows_0_P.ucas	180816	ver	1001	/Windows/pakchunk1001-Windows_0_P.ucas
+pakchunk1001-Windows_0_P.utoc	1149	ver	1001	/Windows/pakchunk1001-Windows_0_P.utoc
+pakchunk1002-Windows_0_P.pak	339	ver	1002	/Windows/pakchunk1002-Windows_0_P.pak
+pakchunk1002-Windows_0_P.ucas	8432	ver	1002	/Windows/pakchunk1002-Windows_0_P.ucas
+pakchunk1002-Windows_0_P.utoc	841	ver	1002	/Windows/pakchunk1002-Windows_0_P.utoc

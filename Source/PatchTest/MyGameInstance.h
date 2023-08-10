@@ -33,8 +33,7 @@ public:
     // 델리게이트
     // 패치 프로세스가 성공 또는 실패하면 발생합니다.
     UPROPERTY(BlueprintAssignable, Category = "Patching");
-
-    FPatchCompleteDelegate OnPatchComplete;
+        FPatchCompleteDelegate OnPatchComplete;
 
 protected:
     // 시도 및 다운로드할 청크 ID 목록
