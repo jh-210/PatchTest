@@ -6,6 +6,7 @@
 #include "ChunkDownloader.h"
 #include "Misc/CoreDelegates.h"
 #include "AssetRegistryModule.h"
+#include "FeaturePackContentSource.h"
 #include "HttpModule.h"
 
 void UMyGameInstance::Init()
@@ -24,6 +25,7 @@ void UMyGameInstance::Init()
 
     // update the build manifest file
     TFunction<void(bool bSuccess)> UpdateCompleteCallback = [&](bool bSuccess) {bIsDownloadManifestUpToDate = bSuccess; };
+
     Downloader->UpdateBuild(DeploymentName, ContentBuildId, UpdateCompleteCallback);
 }
 
@@ -107,13 +109,22 @@ void UMyGameInstance::OnDownloadComplete(bool bSuccess)
         {
             DownloadedChunks.Add(ChunkID);
         }
+        
+        for(int32 chunks : DownloadedChunks)
+        {
+            UE_LOG(LogTemp, Display, TEXT("DownloadedChunks : %d"),chunks);
+        }
 
         //Mount the chunks
         TFunction<void(bool bSuccess)> MountCompleteCallback = [&](bool bSuccess) {OnMountComplete(bSuccess); };
+
+        UE_LOG(LogTemp, Display, TEXT("Mount Starts"));
+
         Downloader->MountChunks(DownloadedChunks, MountCompleteCallback);
 
-        OnPatchComplete.Broadcast(true);
+        UE_LOG(LogTemp, Display, TEXT("Mount Done"));
 
+        OnPatchComplete.Broadcast(true);
     }
     else
     {
