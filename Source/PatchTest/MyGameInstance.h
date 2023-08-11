@@ -12,7 +12,7 @@ DECLARE_DYNAMIC_MULTICAST_DELEGATE_OneParam(FPatchCompleteDelegate, bool, Succee
  * 
  */
 UCLASS()
-class PATCHTEST_API UMyGameInstance : public UGameInstance
+class UMyGameInstance : public UGameInstance
 {
 	GENERATED_BODY()
 	
